@@ -1,6 +1,6 @@
 # MetricLearning
 
-The Metric Learning (similarity based on a distance metric) field has been around for quite some time with several deep neural networks being predominant in the field. We evalauted these prodominant deep neural networks: Variational Auto-Encoders (VAEs), siamese networks, triplet networks, and variational auto-encoders combined with siamese or triplet networks. The networks utilized in the Jupyter notebooks are set up for GPU usage. 
+Metric Learning (similarity based on a distance metric) has been around for quite some time with several deep neural networks being predominant in the field. We evalauted these prodominant deep neural networks: Variational Auto-Encoders (VAEs), siamese networks, triplet networks, and variational auto-encoders combined with siamese or triplet networks. The networks utilized in the Jupyter notebooks are set up for GPU usage. 
 
 ## Convolutional Baseline
 The convolutional baseline takes two inputs that does not make use of image encoding. 
