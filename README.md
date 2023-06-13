@@ -9,7 +9,7 @@ The convolutional baseline takes two inputs that does not make use of image enco
 The Siamese (SiameseNetwork.ipynb) network takes two inputs that is run through the same encoder, creating two low-dimensional representations. This network learns an absolute distance.
 
 ## Triplet Network
-The triplet (TripletNetwork.ipynb) network is an extension of the siamese network where it takes three inputs that is run through the same encoder, creating three low-dimensional representations. This network learns a relative distance. 
+The triplet (TripletNetwork.ipynb) network is an extension of the Siamese network where it takes three inputs that is run through the same encoder, creating three low-dimensional representations. This network learns a relative distance. 
 
 ## VAE Network
 The VAE network(VAE.ipynb) is a type of neural network that takes only one input and does not learn any type of distance metric. Instead, the network is a generative model where it learns to create a low-dimensional representation in a latent space.
