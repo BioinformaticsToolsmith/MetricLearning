@@ -1,6 +1,6 @@
-# MetricLearning
+# Metric Learning
 
-Metric Learning (similarity based on a distance metric) has been around for quite some time with several deep neural networks being predominant in the field. We evalauted these prodominant deep neural networks: Variational Auto-Encoders (VAEs), siamese networks, triplet networks, and variational auto-encoders combined with siamese or triplet networks. The networks utilized in the Jupyter notebooks are set up for GPU usage. 
+Metric Learning (similarity based on a distance metric) has been around for quite some time with several deep neural networks being predominant in the field. We evaluated these predominant deep neural networks: Variational Auto-Encoders (VAEs), Siamese networks, triplet networks, and variational auto-encoders combined with Siamese or triplet networks. The networks utilized in the Jupyter notebooks are set up for GPU usage. 
 
 ## Convolutional Baseline
 The convolutional baseline takes two inputs that does not make use of image encoding. 
@@ -26,5 +26,5 @@ Data (data.py) is preprocessed and split between three different sets: training,
 ## Loaders
 Loaders (loaders.py) are the networks defined by their structure e.g. triplet network taking three inputs, siamese taking two. 
 
-## Networks
-Networks (nets.py) formulate the general architecture of the networks such as the layers they use. 
+## Nets
+Nets (nets.py) formulate the general architecture of the networks such as the layers they use. 
