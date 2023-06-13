@@ -1,30 +1,39 @@
 # Metric Learning
 
-Metric Learning (similarity based on a distance metric) has been around for quite some time with several deep neural networks being predominant in the field. We evaluated these predominant deep neural networks: Variational Auto-Encoders (VAEs), Siamese networks, triplet networks, and variational auto-encoders combined with Siamese or triplet networks. The networks utilized in the Jupyter notebooks are set up for GPU usage. 
+Metric Learning aims to learn a metric that allows for measuring similarity and/or dissimilarity between instances. This repository contains jupyter notebooks for the following 6 types of networks: a seperable convolutional classifier, variational auto-encoders, Siamese networks, triplet networks, and variational auto-encoders combined with Siamese or triplet networks.
 
-## Convolutional Baseline
-The convolutional baseline takes two inputs that does not make use of image encoding. 
+These networks are evaluated on the EMNIST balanced dataset.
 
-## Siamese Network
-The Siamese (SiameseNetwork.ipynb) network takes two inputs that is run through the same encoder, creating two low-dimensional representations. This network learns an absolute distance.
+# Requirements
+Tensorflow 2.0
+tensorflow_datasets (python package)
 
-## Triplet Network
-The triplet (TripletNetwork.ipynb) network is an extension of the Siamese network where it takes three inputs that is run through the same encoder, creating three low-dimensional representations. This network learns a relative distance. 
+To install Tensorflow 2.0, follow the instructions in the following link: https://www.tensorflow.org/install
+To install tensorflow_datasets, use the following command:
+'pip install tensorflow-datasets'
 
-## VAE Network
-The VAE network(VAE.ipynb) is a type of neural network that takes only one input and does not learn any type of distance metric. Instead, the network is a generative model where it learns to create a low-dimensional representation in a latent space.
+# Files
+Each jupyter notebook has the name of the network utilized within.
+Our jupyter notebooks are set up for GPU usage.
+For simplicty, we list them here:
 
-## VAE Siamese Network
-The VAE Siamese (VAESiameseNetwork.ipynb) network is a hybrid of both the VAE and Siamese networks. This network takes two low-dimensional representations taken from the same VAE network and learns an absolute distance. 
+ConvolutionalBaseline.ipynb - our seperable convolutional classifier; does not utilize metric learning
+VAE.ipynb - our variational auto-encoder network.
+SiameseNetwork.ipynb - our Siamese network.
+TripletNetwork.ipynb - our triplet network (based on the siamese architecture.
+VAESiameseNetwork.ipynb - our hybrid of the variational auto-encoder and siamese network.
+VAETripletNetwork.ipynb - our hybrid of the variational auto-encoder and triplet network.
 
-## VAE Triplet Network
-The VAE triplet (VAETripletNetwork.ipynb) network is a hybrid of both the VAE and triplet networks. This network takes three-low dimensional representations taken from the same VAE network and learns an relative distance.
+These jupyter notebooks train and evaluate these networks on the EMNIST balanced dataset.
 
-## Data
-Data (data.py) is preprocessed and split between three different sets: training, validation, and testing.
+Our .py files contain the building blocks of our networks.
+We list their purposes here:
 
-## Loaders
-Loaders (loaders.py) are the networks defined by their structure e.g. triplet network taking three inputs, siamese taking two. 
+data.py - loads our EMNIST balanced dataset 
+loaders.py - generates batches of pairs/triplets of instances from the EMNIST balanced dataset
+nets.py - contains the architectures of the networks, the loss functions, and the evaluation code.
 
-## Nets
-Nets (nets.py) formulate the general architecture of the networks such as the layers they use. 
+# License
+
+Academic use: The software is provided as-is under the GNU GPLv3.
+Any restrictions to use for-profit or non-academics: License needed.
